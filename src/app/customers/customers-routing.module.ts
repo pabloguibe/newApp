@@ -1,7 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CustomersPage } from './customers.page';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path: '',
+    component: CustomersPage
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

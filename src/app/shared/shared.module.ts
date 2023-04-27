@@ -11,14 +11,12 @@ import { IonicModule } from '@ionic/angular';
   imports: [
     IonicModule,
     CommonModule,
-    HttpClientModule,
-    RouterModule,
+    HttpClientModule
   ],
   exports: [
     IonicModule,
     CommonModule,
-    HttpClientModule,
-    RouterModule,
+    HttpClientModule
   ]
 })
 export class SharedModule { }
