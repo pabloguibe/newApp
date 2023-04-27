@@ -1,0 +1,21 @@
+{
+    "data": [
+        {
+            "name":"Han",
+            "state":"Look, kid...",
+            "description":"I've got enough on my..."
+        },
+
+        {
+            "name":"Luke",
+            "state":"Your thoughts bestray you",
+            "description":"I feel the good in you..."
+        },
+
+        {
+            "name":"Leia",
+            "state":"You're my only hope",
+            "description":"I've placed information vital to the survival..."
+        }
+    ]
+}
