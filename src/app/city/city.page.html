@@ -1,13 +1,16 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>city</ion-title>
+  <ion-toolbar color="mycolor">
+    <ion-title>{{name}}</ion-title>
   </ion-toolbar>
+
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">city</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+
+  <ion-card>
+    <img src="../../assets/img/{{image}}" alt="sevilla">
+  </ion-card>
+<div class="desc">
+  {{desc}}
+</div>
 </ion-content>
