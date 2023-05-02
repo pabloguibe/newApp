@@ -14,7 +14,9 @@ import { SharedModule } from '../shared/shared.module';
   ],
   imports: [
     SharedModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    FormsModule,
+    IonicModule
   ]
 })
 export class HomeModule { }
