@@ -17,9 +17,14 @@ import { CitiesRoutingModule } from './cities-routing.module';
 export class CitiesPage implements OnInit {
   cities: any = [];
 
+  token=localStorage.getItem("token");
+
   constructor(private router: Router, private http: HttpClient, public toastController: ToastController, public alertController: AlertController) { }
 
   ngOnInit() {
+    console.log("token: ", this.token);
+    //localStorage.removeItem('token');
+    localStorage.clear();
     console.log("hola");
     this.getCities().subscribe(res => {
       console.log("Res", res)
