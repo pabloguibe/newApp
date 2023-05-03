@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
+import { Share } from '@capacitor/share';
 
 @Component({
   selector: 'app-root',
@@ -15,5 +16,15 @@ export class AppComponent {
     { title: 'cities', url: '/cities', icon: 'location' },
     { title: 'login', url: '/login', icon: 'log-in' },
   ];
-  constructor() {}
+  constructor() { }
+
+  shareApp() {
+    Share.share({
+      title: 'Has visto la nueva app X',
+      text: 'Descarga gratis la nueva app de X y pruebala',
+      url: 'http://ionicframework.com/',
+     
+    });
+
+  }
 }

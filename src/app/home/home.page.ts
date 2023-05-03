@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { Router } from '@angular/router';
+import { BarcodeScanner } from '@awesome-cordova-plugins/barcode-scanner/ngx';
 
 @Component({
   selector: 'app-home',
@@ -11,13 +12,23 @@ import { Router } from '@angular/router';
 })
 export class HomePage implements OnInit {
 
-  constructor(private router: Router) { }
+  code: any;
+
+  constructor(private router: Router, private barcodeScanner: BarcodeScanner) { }
 
   ngOnInit() {
   }
 
-  goToCustomers(){
+  goToCustomers() {
     this.router.navigate(['/customers'])
   }
 
+  scan() {
+    this.barcodeScanner.scan().then(barcodeData => {
+      this.code = barcodeData.text;
+      console.log('Barcode data', this.code);
+    }).catch(err => {
+      console.log('Error', err);
+    });
+  }
 }

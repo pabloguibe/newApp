@@ -9,6 +9,7 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { BrowserModule } from '@angular/platform-browser';
+import { BarcodeScanner } from '@awesome-cordova-plugins/barcode-scanner/ngx';
 
 
 @NgModule({
@@ -20,9 +21,13 @@ import { BrowserModule } from '@angular/platform-browser';
     RouterModule.forRoot([]),
     BrowserModule,
     SharedModule,
-    AppRoutingModule
+    AppRoutingModule,
+    
+    
+    
   ],
   providers: [
+    BarcodeScanner,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
   ],
   bootstrap: [AppComponent]
